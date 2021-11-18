@@ -11,7 +11,7 @@ Class {
 { #category : #'instance creation' }
 CurrencyWebView class >> workingWith: aWorkingContext [
 
-	^self new initializeWorkingWith: aWorkingContext 
+	^self new initializeWorkingWith: aWorkingContext
 ]
 
 { #category : #accessing }

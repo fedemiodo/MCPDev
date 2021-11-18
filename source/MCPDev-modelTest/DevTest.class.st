@@ -17,13 +17,13 @@ DevTest >> testDifferentDevelopers [
 
 	self
 		assert: trainee seniority equals: 'Trainee';
-		assert: trainee production equals: 1;
+		assert: trainee productionPerTick amount equals: 1;
 		assert: junior seniority equals: 'Junior';
-		assert: junior production equals: 5;
+		assert: junior productionPerTick amount equals: 5;
 		assert: semiSenior seniority equals: 'SemiSenior';
-		assert: semiSenior production equals: 25;
+		assert: semiSenior productionPerTick amount equals: 25;
 		assert: senior seniority equals: 'Senior';
-		assert: senior production equals: 125
+		assert: senior productionPerTick amount equals: 125
 ]
 
 { #category : #tests }
@@ -35,5 +35,30 @@ DevTest >> testInstanceCreation [
 	
 	self
 		assert: dev seniority equals: 'Trainee';
-		assert: dev production equals: 1
+		assert: dev productionPerTick amount equals: 1
+]
+
+{ #category : #tests }
+DevTest >> testProducingCurrency [
+
+	| dev currency |
+	
+	currency := DevCoin amount: 0.
+	dev := Trainee new.
+	
+	self
+		assert: dev productionPerTick amount equals: 1;
+		assert: currency amount equals: 0.
+		
+	currency := dev produce: currency.
+	
+	self
+		assert: dev productionPerTick amount equals: 1;
+		assert: currency amount equals: 1.
+	
+	1 to: 10 do: [ :value | currency := dev produce: currency ].
+	
+	self
+		assert: dev productionPerTick amount equals: 1;
+		assert: currency amount equals: 11
 ]

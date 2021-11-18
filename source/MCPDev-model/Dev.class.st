@@ -3,7 +3,7 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'seniority',
-		'production'
+		'productionPerTick'
 	],
 	#category : #'MCPDev-model'
 }
@@ -36,13 +36,19 @@ Dev class >> typeDescription [
 Dev >> initializeWithSeniority: aSeniority producing: aNumber [
 
 	seniority := aSeniority.
-	production := aNumber
+	productionPerTick := DevCoin amount: aNumber
+]
+
+{ #category : #producing }
+Dev >> produce: aDevCoin [
+
+	^aDevCoin + self productionPerTick
 ]
 
 { #category : #accessing }
-Dev >> production [
+Dev >> productionPerTick [
 
-	^production
+	^ productionPerTick
 ]
 
 { #category : #accessing }
