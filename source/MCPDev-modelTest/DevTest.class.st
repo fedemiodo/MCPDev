@@ -1,50 +1,71 @@
 Class {
 	#name : #DevTest,
 	#superclass : #TestCase,
+	#instVars : [
+		'devCoin',
+		'trainee',
+		'junior',
+		'semiSenior',
+		'senior'
+	],
 	#category : #'MCPDev-modelTest'
 }
 
-{ #category : #tests }
-DevTest >> testDifferentDevelopers [
+{ #category : #accessing }
+DevTest >> devCoin [
 
-	| trainee junior semiSenior senior|
+	^ devCoin 
+]
 
-	trainee := Trainee new.
-	junior := Junior new.
-	semiSenior := SemiSenior new.
-	senior := Senior new.
+{ #category : #accessing }
+DevTest >> junior [
 
+	^ junior
+]
 
-	self
-		assert: trainee seniority equals: 'Trainee';
-		assert: trainee productionPerTick amount equals: 1;
-		assert: junior seniority equals: 'Junior';
-		assert: junior productionPerTick amount equals: 5;
-		assert: semiSenior seniority equals: 'SemiSenior';
-		assert: semiSenior productionPerTick amount equals: 25;
-		assert: senior seniority equals: 'Senior';
-		assert: senior productionPerTick amount equals: 125
+{ #category : #accessing }
+DevTest >> semiSenior [
+
+	^ semiSenior
+]
+
+{ #category : #accessing }
+DevTest >> senior [
+
+	^ senior
+]
+
+{ #category : #running }
+DevTest >> setUp [
+	
+	devCoin := DevCoin new.
+	trainee := Trainee producing: self devCoin.
+	junior := Junior producing: self devCoin.
+	semiSenior := SemiSenior producing: self devCoin.
+	senior := Senior producing: self devCoin
 ]
 
 { #category : #tests }
 DevTest >> testInstanceCreation [
-
-	| dev |
-	
-	dev := Trainee new.
 	
 	self
-		assert: dev seniority equals: 'Trainee';
-		assert: dev productionPerTick amount equals: 1
+		assert: self trainee seniority equals: 'Trainee';
+		assert: self trainee productionPerTick amount equals: 1;
+		assert: self junior seniority equals: 'Junior';
+		assert: self junior productionPerTick amount equals: 5;
+		assert: self semiSenior seniority equals: 'SemiSenior';
+		assert: self semiSenior productionPerTick amount equals: 25;
+		assert: self senior seniority equals: 'Senior';
+		assert: self senior productionPerTick amount equals: 125
 ]
 
 { #category : #tests }
 DevTest >> testProducingCurrency [
-
-	| dev currency |
 	
-	currency := DevCoin amount: 0.
-	dev := Trainee new.
+	| currency dev |
+	
+	currency := Measure amount: 0 unit: self devCoin.
+	dev := self trainee.
 	
 	self
 		assert: dev productionPerTick amount equals: 1;
@@ -61,4 +82,10 @@ DevTest >> testProducingCurrency [
 	self
 		assert: dev productionPerTick amount equals: 1;
 		assert: currency amount equals: 11
+]
+
+{ #category : #accessing }
+DevTest >> trainee [
+
+	^trainee
 ]

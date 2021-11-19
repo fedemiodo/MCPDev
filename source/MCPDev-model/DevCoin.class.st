@@ -1,11 +1,11 @@
 Class {
 	#name : #DevCoin,
-	#superclass : #Measure,
+	#superclass : #BaseUnit,
 	#category : #'MCPDev-model'
 }
 
 { #category : #accessing }
-DevCoin class >> amount: aNumber [
+DevCoin class >> new [
 
-	^self amount: aNumber unit: (BaseUnit nameForOne: 'DevCoin' nameForMany: 'DevCoins' sign: 'DC')
+	^self nameForOne: 'DevCoin' nameForMany: 'DevCoins' sign: 'DC'
 ]

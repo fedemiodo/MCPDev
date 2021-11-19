@@ -15,15 +15,15 @@ Dev class >> baseProduction [
 ]
 
 { #category : #'instance creation' }
-Dev class >> new [
+Dev class >> producing: aCurrency [
 
-	^self seniority: self typeDescription producing: self baseProduction
+	^ self seniority: self typeDescription producing: aCurrency
 ]
 
 { #category : #'instance creation' }
-Dev class >> seniority: aSeniority producing: aNumber [
+Dev class >> seniority: aSeniority producing: aCurrency [
 
-	^super new initializeWithSeniority: aSeniority producing: aNumber
+	^ super new initializeWithSeniority: aSeniority producing: aCurrency
 ]
 
 { #category : #'instance creation' }
@@ -33,10 +33,16 @@ Dev class >> typeDescription [
 ]
 
 { #category : #initialization }
-Dev >> initializeWithSeniority: aSeniority producing: aNumber [
+Dev >> baseProduction [
+
+	^ self class baseProduction
+]
+
+{ #category : #initialization }
+Dev >> initializeWithSeniority: aSeniority producing: aCurrency [
 
 	seniority := aSeniority.
-	productionPerTick := DevCoin amount: aNumber
+	productionPerTick := Measure amount: self baseProduction unit: aCurrency
 ]
 
 { #category : #producing }
