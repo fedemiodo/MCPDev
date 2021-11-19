@@ -1,6 +1,6 @@
 Class {
 	#name : #DevCoin,
-	#superclass : #AnObsoleteBaseUnit,
+	#superclass : #BaseUnit,
 	#category : #'MCPDev-model'
 }
 
