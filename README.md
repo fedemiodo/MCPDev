@@ -1,4 +1,4 @@
-# ToDoWebApplication
+# Simple Coding game
 
 What is this thing? “the motto”, the goals, the vision.
 
