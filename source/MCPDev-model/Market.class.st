@@ -5,7 +5,7 @@ Class {
 		'developers',
 		'currency'
 	],
-	#category : #'MCPDev-model'
+	#category : #'MCPDev-model-Model'
 }
 
 { #category : #'instance creation' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #MarketTest,
 	#superclass : #TestCase,
-	#category : #'MCPDev-modelTest'
+	#category : #'MCPDev-modelTest-Tests'
 }
 
 { #category : #tests }

@@ -1,7 +1,7 @@
 Class {
 	#name : #Junior,
 	#superclass : #Dev,
-	#category : #'MCPDev-model'
+	#category : #'MCPDev-model-Model'
 }
 
 { #category : #'instance creation' }

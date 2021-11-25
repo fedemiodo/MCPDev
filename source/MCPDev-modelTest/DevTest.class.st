@@ -8,7 +8,7 @@ Class {
 		'semiSenior',
 		'senior'
 	],
-	#category : #'MCPDev-modelTest'
+	#category : #'MCPDev-modelTest-Tests'
 }
 
 { #category : #accessing }
