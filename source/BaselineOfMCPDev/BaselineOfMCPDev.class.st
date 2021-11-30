@@ -23,7 +23,7 @@ BaselineOfMCPDev >> setUpDependencies: spec [
 
 	spec baseline: 'Buoy' with: [ spec repository: 'github://ba-st/Buoy:v6/source' ].
 	spec baseline: 'WillowBootstrap' with: [ spec repository: 'github://ba-st/Willow-Bootstrap:v13/source' ].
-	spec baseline: 'Chalten' with: [ spec repository: 'github://ba-st/Chalten:v8/source' ]
+	spec baseline: 'Aconcagua' with: [ spec repository: 'github://ba-st/Aconcagua:release-candidate/source' ]
 ]
 
 { #category : #accessing }
