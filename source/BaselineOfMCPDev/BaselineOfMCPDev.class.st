@@ -32,6 +32,6 @@ BaselineOfMCPDev >> setUpPackages: spec [
 	spec for: #pharo do: [ 
 		spec
 			package: 'MCPDev-web' with: [ spec requires: #('WillowBootstrap' 'MCPDev-model') ];
-			package: 'MCPDev-model' with: [ spec requires: #('Buoy' 'Chalten') ];
+			package: 'MCPDev-model' with: [ spec requires: #('Buoy' 'Aconcagua') ];
 			package: 'MCPDev-modelTest'	with: [ spec requires: 'MCPDev-model' ] ]
 ]
