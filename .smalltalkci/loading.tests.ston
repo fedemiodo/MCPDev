@@ -1,7 +1,7 @@
 SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
-      #baseline : 'ToDoWebApplication',
+      #baseline : 'MCPDev',
       #directory : '../source',
       #load : [ 'Tests' ],
       #platforms : [  #pharo ]
@@ -9,7 +9,7 @@ SmalltalkCISpec {
   ],
   #testing : {
     #coverage : {
-      #packages : [ 'ToDoWebApplication*' ],
+      #packages : [ 'MCPDev*' ],
       #format: #lcov
     }
   }
