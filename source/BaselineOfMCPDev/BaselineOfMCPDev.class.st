@@ -33,5 +33,9 @@ BaselineOfMCPDev >> setUpPackages: spec [
 		spec
 			package: 'MCPDev-web' with: [ spec requires: #('WillowBootstrap' 'MCPDev-model') ];
 			package: 'MCPDev-model' with: [ spec requires: #('Buoy' 'Aconcagua') ];
-			package: 'MCPDev-modelTest'	with: [ spec requires: 'MCPDev-model' ] ]
+			package: 'MCPDev-modelTest'	with: [ spec requires: 'MCPDev-model' ].
+				
+		spec
+			group: 'Tests' with: 'MCPDev-modelTest';
+			group: 'Development' with: 'Tests' ]
 ]
