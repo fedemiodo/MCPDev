@@ -1,6 +1,6 @@
 # Simple Coding game
 
-What is this thing? “the motto”, the goals, the vision.
+A simple coding game to practise and teach the most basic POO programming techniques.
 
 [![Unit Tests](https://github.com/fedemiodo/MCPDev/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/fedemiodo/MCPDev/actions/workflows/unit-tests.yml/badge.svg)
 [![Coverage Status](https://codecov.io/github/fedemiodo/MCPDev/coverage.svg?branch=release-candidate)](https://codecov.io/gh/fedemiodo/MCPDev/branch/release-candidate)
