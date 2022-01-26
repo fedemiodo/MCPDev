@@ -51,12 +51,16 @@ DevTest >> testInstanceCreation [
 	self
 		assert: self trainee seniority equals: 'Trainee';
 		assert: self trainee productionPerTick amount equals: 1;
+		assert: self trainee cost equals: 10;
 		assert: self junior seniority equals: 'Junior';
 		assert: self junior productionPerTick amount equals: 5;
+		assert: self junior cost equals: 50;
 		assert: self semiSenior seniority equals: 'SemiSenior';
 		assert: self semiSenior productionPerTick amount equals: 25;
+		assert: self semiSenior cost equals: 250;
 		assert: self senior seniority equals: 'Senior';
-		assert: self senior productionPerTick amount equals: 125
+		assert: self senior productionPerTick amount equals: 125;
+		assert: self senior cost equals: 2500
 ]
 
 { #category : #tests }

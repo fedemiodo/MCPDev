@@ -11,6 +11,12 @@ Junior class >> baseProduction [
 ]
 
 { #category : #'instance creation' }
+Junior class >> cost [
+
+	^ 50
+]
+
+{ #category : #'instance creation' }
 Junior class >> typeDescription [
 
 	^'Junior'

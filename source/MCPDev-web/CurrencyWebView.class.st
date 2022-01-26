@@ -9,9 +9,9 @@ Class {
 }
 
 { #category : #'instance creation' }
-CurrencyWebView class >> workingWith: aWorkingContext [
+CurrencyWebView class >> displayedIn: aWorkingContext [
 
-	^self new initializeWorkingWith: aWorkingContext
+	^self new initializeDisplayedIn: aWorkingContext
 ]
 
 { #category : #accessing }
@@ -21,7 +21,7 @@ CurrencyWebView >> coins [
 ]
 
 { #category : #'instance creation' }
-CurrencyWebView >> initializeWorkingWith: aWorkingContext [
+CurrencyWebView >> initializeDisplayedIn: aWorkingContext [
 
 	workingContext := aWorkingContext.
 	

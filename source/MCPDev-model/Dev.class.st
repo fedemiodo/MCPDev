@@ -3,7 +3,8 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'seniority',
-		'productionPerTick'
+		'productionPerTick',
+		'cost'
 	],
 	#category : #'MCPDev-model-Model'
 }
@@ -12,6 +13,12 @@ Class {
 Dev class >> baseProduction [
 
 	^self subclassResponsibility
+]
+
+{ #category : #'instance creation' }
+Dev class >> cost [
+
+	self subclassResponsibility
 ]
 
 { #category : #'instance creation' }
@@ -38,11 +45,18 @@ Dev >> baseProduction [
 	^ self class baseProduction
 ]
 
+{ #category : #accessing }
+Dev >> cost [
+
+	^ self class cost
+]
+
 { #category : #initialization }
 Dev >> initializeWithSeniority: aSeniority producing: aCurrency [
 
 	seniority := aSeniority.
-	productionPerTick := Measure amount: self baseProduction unit: aCurrency
+	productionPerTick := Measure amount: self baseProduction unit: aCurrency.
+	cost := Measure amount: self cost unit: aCurrency
 ]
 
 { #category : #producing }

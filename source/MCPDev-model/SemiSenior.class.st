@@ -11,6 +11,12 @@ SemiSenior class >> baseProduction [
 ]
 
 { #category : #'instance creation' }
+SemiSenior class >> cost [
+
+	^ 250
+]
+
+{ #category : #'instance creation' }
 SemiSenior class >> typeDescription [
 
 	^'SemiSenior' 

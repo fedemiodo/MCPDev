@@ -11,6 +11,12 @@ Trainee class >> baseProduction [
 ]
 
 { #category : #'instance creation' }
+Trainee class >> cost [
+
+	^ 10
+]
+
+{ #category : #'instance creation' }
 Trainee class >> typeDescription [
 
 	^'Trainee'

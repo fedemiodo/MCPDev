@@ -11,6 +11,12 @@ Senior class >> baseProduction [
 ]
 
 { #category : #'instance creation' }
+Senior class >> cost [
+
+	^ 2500
+]
+
+{ #category : #'instance creation' }
 Senior class >> typeDescription [
 
 	^'Senior'
