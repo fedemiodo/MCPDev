@@ -1,7 +1,7 @@
 SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
-      #baseline : 'ToDoWebApplication',
+      #baseline : 'MCPDev',
       #directory : '../source',
       #load : [ 'Dependent-SUnit-Extensions' ],
       #platforms : [  #pharo ]
