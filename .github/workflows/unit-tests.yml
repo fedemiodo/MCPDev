@@ -24,4 +24,4 @@ jobs:
         uses: codecov/codecov-action@v1
         with:
           name: ${{matrix.os}}-${{matrix.smalltalk}}
-          token: ${{ secrets.CODECOV_TOKEN }}
+          token: ${{ d62cad83-38d7-4652-98db-d26779cb3037 }}
