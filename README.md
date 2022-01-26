@@ -1,6 +1,6 @@
 # Simple Coding game
 
-A simple coding game to practise and teach the most basic POO programming techniques.
+
 
 [![Unit Tests](https://github.com/fedemiodo/MCPDev/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/fedemiodo/MCPDev/actions/workflows/unit-tests.yml/badge.svg)
 [![Coverage Status](https://codecov.io/github/fedemiodo/MCPDev/coverage.svg?branch=release-candidate)](https://codecov.io/gh/fedemiodo/MCPDev/branch/release-candidate)
@@ -11,8 +11,7 @@ A simple coding game to practise and teach the most basic POO programming techni
 [![Pharo 8.0](https://img.shields.io/badge/Pharo-8.0-informational)](https://pharo.org)
 [![Pharo 9.0](https://img.shields.io/badge/Pharo-9.0-informational)](https://pharo.org)
 
-Why would I care about this thing? When to use it? For whom is it designed?
-When not to use it?
+A simple coding game to practise and teach the most basic POO programming techniques.
 
 Quick links
 
