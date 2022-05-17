@@ -9,7 +9,7 @@ SmalltalkCISpec {
   ],
   #testing : {
     #coverage : {
-      #packages : [ 'MCPDev' ],
+      #packages : [ 'MCPDev*' ],
       #format: #lcov
     }
   }
